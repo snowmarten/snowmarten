@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "agentsec"
+version = "0.1.0"
+description = "The missing security layer for AI agents"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Your Name", email = "you@email.com" }]
+keywords = [
+  "ai-security", "llm", "agents", "prompt-injection",
+  "langchain", "openai", "security"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Security",
+]
+requires-python = ">=3.9"
+dependencies = [
+  "pydantic>=2.0",
+  "sentence-transformers>=2.2",
+  "numpy>=1.24",
+  "pyyaml>=6.0",
+  "jsonschema>=4.17",
+  "opentelemetry-sdk>=1.20",
+  "rich>=13.0",      # Pretty console output
+]
+
+[project.optional-dependencies]
+langchain = ["langchain>=0.2", "langchain-openai>=0.1"]
+openai   = ["openai>=1.30"]
+llamaindex = ["llama-index>=0.10"]
+dev = ["pytest", "ruff", "mypy", "pre-commit", "pytest-asyncio"]
+all = ["agentsec[langchain,openai,llamaindex,dev]"]
+
+[project.urls]
+Homepage    = "https://github.com/YOUR_USERNAME/agentsec"
+Docs        = "https://docs.agentsec.dev"
+"Bug Tracker" = "https://github.com/YOUR_USERNAME/agentsec/issues"
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
