@@ -1,9 +1,9 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "agentsec"
+name = "snowmarten"
 version = "0.1.0"
 description = "The missing security layer for AI agents"
 readme = "README.md"
@@ -34,12 +34,12 @@ langchain = ["langchain>=0.2", "langchain-openai>=0.1"]
 openai   = ["openai>=1.30"]
 llamaindex = ["llama-index>=0.10"]
 dev = ["pytest", "ruff", "mypy", "pre-commit", "pytest-asyncio"]
-all = ["agentsec[langchain,openai,llamaindex,dev]"]
+all = ["snowmarten[langchain,openai,llamaindex,dev]"]
 
 [project.urls]
-Homepage    = "https://github.com/YOUR_USERNAME/agentsec"
-Docs        = "https://docs.agentsec.dev"
-"Bug Tracker" = "https://github.com/YOUR_USERNAME/agentsec/issues"
+Homepage    = "https://github.com/snowmarten/snowmarten"
+Docs        = "https://docs.snowmarten.dev"
+"Bug Tracker" = "https://github.com/snowmarten/snowmarten/issues"
 
 [tool.ruff]
 line-length = 88

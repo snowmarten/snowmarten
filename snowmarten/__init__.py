@@ -2,7 +2,7 @@
 Snowmarten — The missing security layer for AI agents.
 """
 
-from snowmarten.agent import SecureAgent
+from snowmarten.main import SecureAgent
 from snowmarten.types import AgentContext, SecurityResult, PolicyDecision
 
 __version__ = "0.1.0"

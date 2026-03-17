@@ -1,6 +1,6 @@
 import pytest
-from agentsec.firewall.firewall import PromptFirewall, FirewallConfig
-from agentsec.types import Action, ThreatType
+from snowmarten.firewall.firewall import PromptFirewall, FirewallConfig
+from snowmarten.types import Action, ThreatType
 
 
 @pytest.fixture
